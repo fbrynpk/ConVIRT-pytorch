@@ -147,7 +147,7 @@ class SimCLR(object):
             if epoch_counter >= 10:
                 scheduler.step(valid_loss)
             self.writer.add_scalar(
-                "lr_decay_on_plateau",
+                "cosine_lr_decay",
                 scheduler.get_last_lr()[0],
                 global_step=n_iter,
             )
