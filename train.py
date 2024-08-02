@@ -62,7 +62,7 @@ class SimCLR(object):
         )
 
         scheduler = torch.optim.lr_scheduler.CosineAnnealingLR(
-            optimizer, T_max=len(train_loader), beta_min=0, last_epoch=-1
+            optimizer, T_max=len(train_loader), eta_min=0, last_epoch=-1
         )
 
         scaler = GradScaler()
