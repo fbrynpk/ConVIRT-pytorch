@@ -68,7 +68,7 @@ class ClrDataset(Dataset):
                                     )
             with open(text_path) as f:
                 content = f.readlines()
-            content = content.replace("\n", "")
+            content = content[0].replace("\n", "")
             ls_text = content.split(".")
             if '' in ls_text:
                 ls_text.remove('')
